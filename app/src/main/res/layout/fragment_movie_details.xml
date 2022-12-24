@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="movieDetails"
+            type="com.mertyazi.mertyazi.data.remote.responses.MovieDetailsResponse" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/movie_details_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/fl_movie_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_movie_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/moonrise_kingdom"
+                    setImageView="@{movieDetails.backdrop_path}"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true" />
+
+                <ImageView
+                    android:id="@+id/iv_movie_details_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/image_overlay"
+                    android:alpha="0.4"
+                    android:scaleType="fitXY" />
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_imdb_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fl_movie_details">
+
+                <ImageView
+                    android:id="@+id/iv_movie_imdb"
+                    android:layout_width="@dimen/_34sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    tools:src="@drawable/imdb_logo"
+                    android:src="@drawable/imdb_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_movie_imdb_rate"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    tools:src="@drawable/rate_icon"
+                    android:src="@drawable/rate_icon"
+                    app:layout_constraintStart_toEndOf="@+id/iv_movie_imdb"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_movie_imdb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/textBlack"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    tools:text="7.8"
+                    convertVoteAverageToString="@{movieDetails.vote_average}"
+                    app:layout_constraintStart_toEndOf="@+id/iv_movie_imdb_rate"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_movie_imdb_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/textDarkGrey"
+                    android:fontFamily="@font/roboto_medium"
+                    tools:text="/10"
+                    setMaxRate="@{10}"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_movie_imdb"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_movie_imdb_dot"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    tools:src="@drawable/dot_imdb"
+                    android:src="@drawable/dot_imdb"
+                    app:layout_constraintStart_toEndOf="@+id/tv_movie_imdb_max"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_movie_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/textBlack"
+                    android:fontFamily="@font/roboto_medium"
+                    tools:text="15.06.2021"
+                    convertReleaseDateToString="@{movieDetails.release_date}"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_movie_imdb_dot"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/moonrise_kingdom"
+                convertTitleToString="@{movieDetails.title}"
+                minifyDate="@{movieDetails.release_date}"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cl_imdb_content" />
+
+            <TextView
+                android:id="@+id/tv_movie_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/moonrise_kingdom_description"
+                android:text="@{movieDetails.overview}"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingMultiplier="0"
+                android:lineSpacingExtra="@dimen/_17ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_movie_title" />
+
+            <ProgressBar
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_25sdp"
+                android:minWidth="@dimen/_25sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

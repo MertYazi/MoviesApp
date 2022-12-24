@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">mertyazi</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movie_title">The Great Beauty (2013)</string>
+    <string name="movie_description">Jep Gambardella has seduced his way through the lavish.</string>
+    <string name="movie_date">15.06.2021</string>
+    <string name="moonrise_kingdom">Moonrise Kingdom (2012)</string>
+    <string name="moonrise_kingdom_description">A pair of young lovers flee their New England town which causes a local search party to fan out to find them.</string>
+    <string name="out_of_ten">/10</string>
+    <string name="details_not_ready">Details for this movie is not ready yet.</string>
+</resources>
