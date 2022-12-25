@@ -19,7 +19,8 @@
  
 P.S. For those who want to use this demo, need to get an API Key from "https://www.themoviedb.org/" and paste it to "gradle.properties" with keyword "API_KEY".
 
-# License
+### License
+```
    Copyright (C) 2022 Mert Yazı
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -32,3 +33,4 @@ P.S. For those who want to use this demo, need to get an API Key from "https://w
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+```
