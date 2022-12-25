@@ -8,6 +8,7 @@
  - HILT
  - Navigation Components
  - Coroutines
+ - Flows
  - Retrofit
  - LiveData
  - ViewBinding
@@ -34,6 +35,6 @@
 ```
 
 ### Contributing
-Just make a pull request.
-Get an API key from "https://www.themoviedb.org/"
-Paste that key to "gradle.properties" with keyword "API_KEY".
+- Just make a pull request.
+- Get an API key for your own from "https://www.themoviedb.org/"
+- Paste that key to "gradle.properties" with keyword "API_KEY".
