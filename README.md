@@ -16,8 +16,6 @@
  - Pixel Perfect
  - SafeArgs
  - Glide
- 
-P.S. For those who want to use this demo, need to get an API Key from "https://www.themoviedb.org/" and paste it to "gradle.properties" with keyword "API_KEY".
 
 ### License
 ```
@@ -34,3 +32,8 @@ P.S. For those who want to use this demo, need to get an API Key from "https://w
    See the License for the specific language governing permissions and
    limitations under the License.
 ```
+
+### Contributing
+Just make a pull request.
+Get an API key from "https://www.themoviedb.org/"
+Paste that key to "gradle.properties" with keyword "API_KEY".
