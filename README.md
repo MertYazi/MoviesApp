@@ -8,7 +8,7 @@ It's a demo project to display currently playing movies and track down the upcom
 
 | Mode  | Movies (Dark) | Movie Details (Dark) |
 |------|------------|------------|
-| Landscape | <img src="screenshots/movies_fragment_dark_landscape.jpg" width="400"> | <img src="screenshots/details_fragment_dark_landscape.jpg" width="400"> |
+| Landscape | <img src="screenshots/movies_fragment_dark_landscape.jpg" width="420"> | <img src="screenshots/details_fragment_dark_landscape.jpg" width="420"> |
 
 
 Aim is implementing new technologies and best practices in android development such as:
