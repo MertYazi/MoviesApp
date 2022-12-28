@@ -16,7 +16,8 @@ It's a demo project to display currently playing movies and track down the upcom
 
 <br />
 
-Aim is implementing new technologies and best practices in android development such as:
+### The Aim Of The Project
+Implementing new technologies and best practices in android development such as:
  - TDD
  - MVVM
  - HILT
