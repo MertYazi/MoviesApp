@@ -1,16 +1,17 @@
 # MoviesApp
 
--> It's a demo project to see currently playing movies and track down the upcoming movies.
+It's a demo project to display currently playing movies and track down the upcoming movies.
 
 | Mode  | Movies (Dark) | Movies (Light) | Movie Details (Dark) | Movie Details (Light) |
-|--------|------|------|------|------|
+|------|------|------|------|------|
 | Portrait | <img src="screenshots/movies_fragment_dark_portrait.jpg" width="200"> | <img src="screenshots/movies_fragment_light_portrait.jpg" width="200"> | <img src="screenshots/details_fragment_dark_portrait.jpg" width="200"> | <img src="screenshots/details_fragment_light_portrait.jpg" width="200"> |
 
 | Mode  | Movies (Dark) | Movie Details (Dark) |
 |------|------------|------------|
-| Landscape | <img src="screenshots/movies_fragment_dark_landscape.jpg"> | <img src="screenshots/details_fragment_dark_landscape.jpg"> |
+| Landscape | <img src="screenshots/movies_fragment_dark_landscape.jpg" width="400"> | <img src="screenshots/details_fragment_dark_landscape.jpg" width="400"> |
 
--> Aim is using and practising new technologies in android development such as:
+
+Aim is implementing new technologies and best practices in android development such as:
  - TDD
  - MVVM
  - HILT
@@ -25,6 +26,7 @@
  - Responsive Design
  - SafeArgs
  - Glide
+
 
 ### License
 ```
@@ -41,6 +43,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ```
+
 
 ### Contributing
 - Just make a pull request.
