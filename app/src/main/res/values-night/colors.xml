@@ -12,19 +12,19 @@
     <color name="colorError">#d50000</color>
     <color name="colorOnError">#ffffff</color>
 
-    <color name="colorText">#2B2D42</color>
-    <color name="colorSubText">#8D99AE</color>
+    <color name="colorText">#bdbdbd</color>
+    <color name="colorSubText">#9e9e9e</color>
     <color name="colorSliderText">#c1c1c1</color>
 
     <color name="colorBlack">#FF000000</color>
     <color name="colorWhite">#FFFFFFFF</color>
 
     <color name="colorImdbDot">#E6B91E</color>
-    <color name="colorImdbPoints">#ADB5BD</color>
+    <color name="colorImdbPoints">#88949f</color>
 
-    <color name="colorDivider">#E9ECEF</color>
+    <color name="colorDivider">#212121</color>
 
-    <color name="indicatorSelected">#FFFFFF</color>
-    <color name="indicatorUnselected">#B2B2B2</color>
+    <color name="indicatorSelected">#121212</color>
+    <color name="indicatorUnselected">#c0c0c0</color>
 
 </resources>
