@@ -4,13 +4,13 @@
 
 | Mode  | Movies | Movie Details |
 |-------|------|-----------|
-| Dark | <img src="screenshot/movies_fragment_dark_portrait.jpg" width="250"> | <img src="screenshot/details_fragment_dark_portrait.jpg" width="250"> | 
-| Light | <img src="screenshot/movies_fragment_light_portrait.jpg" | <img src="screenshot/details_fragment_light_portrait.jpg" width="250"> |
+| Dark | <img src="screenshots/movies_fragment_dark_portrait.jpg" width="250"> | <img src="screenshots/details_fragment_dark_portrait.jpg" width="250"> | 
+| Light | <img src="screenshots/movies_fragment_light_portrait.jpg" | <img src="screenshots/details_fragment_light_portrait.jpg" width="250"> |
 
 
 | Orientation  | Movies | Movie Details | 
 |-------|------|------|
-| Landscape | <img src="screenshot/movies_fragment_light_landscape.jpg"> | <img src="screenshot/details_fragment_light_landscape.jpg"> |
+| Landscape | <img src="screenshots/movies_fragment_light_landscape.jpg"> | <img src="screenshots/details_fragment_dark_landscape.jpg"> |
 
 -> Aim is using and practising new technologies in android development such as:
  - TDD
