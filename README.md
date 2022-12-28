@@ -1,6 +1,6 @@
 # MoviesApp
 
-It's a demo project to display currently playing movies and track down the upcoming movies.
+<p>It's a demo project to display currently playing movies and track down the upcoming movies.</p>
 
 | Mode  | Movies (Dark) | Movies (Light) | Movie Details (Dark) | Movie Details (Light) |
 |------|------|------|------|------|
@@ -11,7 +11,7 @@ It's a demo project to display currently playing movies and track down the upcom
 | Landscape | <img src="screenshots/movies_fragment_dark_landscape.jpg" width="415"> | <img src="screenshots/details_fragment_dark_landscape.jpg" width="415"> |
 
 
-Aim is implementing new technologies and best practices in android development such as:
+<p>Aim is implementing new technologies and best practices in android development such as:</p>
  - TDD
  - MVVM
  - HILT
