@@ -2,14 +2,9 @@
 
 -> It's a demo project to see currently playing movies and track down the upcoming movies.
 
-| Mode  | Movies | Movie Details |
-|-------|------|-----------|
-| Dark | <img src="screenshots/movies_fragment_dark_portrait.jpg" width="250"> | <img src="screenshots/details_fragment_dark_portrait.jpg" width="250"> | 
-| Light | <img src="screenshots/movies_fragment_light_portrait.jpg" width="250"> | <img src="screenshots/details_fragment_light_portrait.jpg" width="250"> |
-
-
-| Orientation  | Movies | Movie Details | 
-|-------|------|------|
+| Mode  | Movies (Dark) | Movies (Light) | Movie Details (Dark) | Movie Details (Light) |
+|-------|------|-----------|------|-----------|
+| Portrait | <img src="screenshots/movies_fragment_dark_portrait.jpg" width="250"> | <img src="screenshots/movies_fragment_light_portrait.jpg" width="250"> <img src="screenshots/details_fragment_dark_portrait.jpg" width="250"> | <img src="screenshots/details_fragment_light_portrait.jpg" width="250"> |
 | Landscape | <img src="screenshots/movies_fragment_dark_landscape.jpg"> | <img src="screenshots/details_fragment_dark_landscape.jpg"> |
 
 -> Aim is using and practising new technologies in android development such as:
