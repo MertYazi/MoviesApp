@@ -1,6 +1,7 @@
 # MoviesApp
 
 It's a demo project to display currently playing movies and track down the upcoming movies.
+Project is written in Kotlin.💯
 
 <br />
 
