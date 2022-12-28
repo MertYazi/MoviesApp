@@ -1,9 +1,13 @@
 package com.mertyazi.mertyazi.ui
 
+import android.util.Log
 import androidx.lifecycle.*
 import com.mertyazi.mertyazi.repositories.MoviesRepository
 import com.mertyazi.mertyazi.data.remote.responses.NowPlayingResponse
 import com.mertyazi.mertyazi.data.remote.responses.UpcomingResponse
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
@@ -27,7 +31,7 @@ class MoviesViewModel(
         getNowPlayingMovies()
     }
 
-    fun getUpcomingMovies() = viewModelScope.launch {
+    fun getUpcomingMovies() = viewModelScope.safeLaunch {
         upcomingMoviesPage++
         loader.postValue(true)
         repository.getUpcomingMovies(upcomingMoviesPage).collect { result ->
@@ -47,7 +51,7 @@ class MoviesViewModel(
         }
     }
 
-    private fun getNowPlayingMovies() = viewModelScope.launch {
+    private fun getNowPlayingMovies() = viewModelScope.safeLaunch {
         loader.postValue(true)
         repository.getNowPlayingMovies().collect { result ->
             if (result.isSuccess) {
@@ -77,6 +81,19 @@ class MoviesViewModel(
                 loader.postValue(false)
             }
             .asLiveData())
+    }
+
+    private fun CoroutineScope.safeLaunch(block: suspend CoroutineScope.() -> Unit): Job {
+        return this.launch {
+            try {
+                block()
+            } catch (ce: CancellationException) {
+                // You can ignore or log this exception
+            } catch (e: Exception) {
+                // Here it's better to at least log the exception
+                Log.e("TAG","Coroutine error", e)
+            }
+        }
     }
 
 }
