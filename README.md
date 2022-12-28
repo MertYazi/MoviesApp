@@ -1,16 +1,21 @@
 # MoviesApp
 
 <br />
+
 It's a demo project to display currently playing movies and track down the upcoming movies.
+
 <br />
 
 | Mode  | Movies (Dark) | Movies (Light) | Movie Details (Dark) | Movie Details (Light) |
 |------|------|------|------|------|
 | Portrait | <img src="screenshots/movies_fragment_dark_portrait.jpg" width="200"> | <img src="screenshots/movies_fragment_light_portrait.jpg" width="200"> | <img src="screenshots/details_fragment_dark_portrait.jpg" width="200"> | <img src="screenshots/details_fragment_light_portrait.jpg" width="200"> |
+
 <br />
+
 | Mode  | Movies (Dark) | Movie Details (Dark) |
 |------|------------|------------|
 | Landscape | <img src="screenshots/movies_fragment_dark_landscape.jpg" width="415"> | <img src="screenshots/details_fragment_dark_landscape.jpg" width="415"> |
+
 <br />
 
 Aim is implementing new technologies and best practices in android development such as:
@@ -28,7 +33,9 @@ Aim is implementing new technologies and best practices in android development s
  - Responsive Design
  - SafeArgs
  - Glide
+
 <br />
+
 ### License
 ```
    Copyright (C) 2022 Mert Yazı
