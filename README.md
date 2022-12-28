@@ -1,7 +1,5 @@
 # MoviesApp
 
-<br />
-
 It's a demo project to display currently playing movies and track down the upcoming movies.
 
 <br />
@@ -52,6 +50,7 @@ Aim is implementing new technologies and best practices in android development s
    limitations under the License.
 ```
 <br />
+
 ### Contributing
 - Just make a pull request.
 - Get an API key for your own from "https://www.themoviedb.org/"
