@@ -14,7 +14,7 @@
  - ViewBinding
  - DataBinding
  - Pagination
- - Pixel Perfect
+ - Responsive Design
  - SafeArgs
  - Glide
 
