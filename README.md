@@ -3,7 +3,7 @@
 -> It's a demo project to see currently playing movies and track down the upcoming movies.
 
 | Mode  | Movies (Dark) | Movies (Light) | Movie Details (Dark) | Movie Details (Light) |
-|------|------|------|------|------|
+|--------|------|------|------|------|
 | Portrait | <img src="screenshots/movies_fragment_dark_portrait.jpg" width="200"> | <img src="screenshots/movies_fragment_light_portrait.jpg" width="200"> | <img src="screenshots/details_fragment_dark_portrait.jpg" width="200"> | <img src="screenshots/details_fragment_light_portrait.jpg" width="200"> |
 
 | Mode  | Movies (Dark) | Movie Details (Dark) |
