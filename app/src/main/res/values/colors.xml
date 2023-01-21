@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primaryColor">#29b6f6</color>
-    <color name="primaryLightColor">#73e8ff</color>
-    <color name="primaryDarkColor">#0086c3</color>
+    <color name="primaryColor">#d32f2f</color>
+    <color name="primaryLightColor">#ff6659</color>
+    <color name="primaryDarkColor">#9a0007</color>
 
     <color name="secondaryColor">#009688</color>
     <color name="secondaryLightColor">#52c7b8</color>
@@ -22,7 +22,9 @@
     <color name="colorImdbDot">#E6B91E</color>
     <color name="colorImdbPoints">#ADB5BD</color>
 
-    <color name="colorDivider">#E9ECEF</color>
+    <color name="colorDivider">#ffcdd2</color>
+
+    <color name="colorNavBar">#FFFFFFFF</color>
 
     <color name="indicatorSelected">#FFFFFF</color>
     <color name="indicatorUnselected">#B2B2B2</color>

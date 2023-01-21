@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import com.mertyazi.mertyazi.data.remote.responses.Genre
 import com.mertyazi.mertyazi.other.Constants.POSTER_PATH
 import com.mertyazi.mertyazi.other.Constants.convertDate
 import com.mertyazi.mertyazi.other.Constants.minifyDate
@@ -37,6 +38,19 @@ fun TextView.convertReleaseDateToString(value: String?) {
 fun TextView.convertTitleToString(value: String?, date: String?) {
     if (value != null && date != null) {
         this.text =  value + minifyDate(date)
+    } else {
+        this.text =  ""
+    }
+}
+
+@BindingAdapter("convertGenresToString")
+fun TextView.convertGenresToString(genres: List<Genre>?) {
+    if (genres != null) {
+        val genresList = StringBuilder(256)
+        for (genre in genres) {
+            genresList.append(" " + genre.name + "  ")
+        }
+        this.text = genresList.toString()
     } else {
         this.text =  ""
     }
