@@ -5,15 +5,17 @@ Project is written in Kotlin.💯
 
 <br />
 
-| Mode  | Movies (Dark) | Movies (Light) | Movie Details (Dark) | Movie Details (Light) |
-|------|------|------|------|------|
-| Portrait | <img src="screenshots/movies_fragment_dark_portrait.jpg" width="200"> | <img src="screenshots/movies_fragment_light_portrait.jpg" width="200"> | <img src="screenshots/details_fragment_dark_portrait.jpg" width="200"> | <img src="screenshots/details_fragment_light_portrait.jpg" width="200"> |
+| Mode  | Movies | Favorites | Details |
+|------|------|------|------|
+| Dark | <img src="screenshot/movies_dark_portrait.jpg" width="275"> | <img src="screenshot/favorites_dark_portrait.jpg" width="275"> | <img src="details_dark_portrait.jpg" width="275"> |
+| Light | <img src="screenshot/movies_light_portrait.jpg" width="275"> | <img src="screenshot/favorites_light_portrait.jpg" width="275"> | <img src="details_light_portrait.jpg" width="275"> |
 
 <br />
 
-| Mode  | Movies (Dark) | Movie Details (Dark) |
-|------|------------|------------|
-| Landscape | <img src="screenshots/movies_fragment_dark_landscape.jpg" width="415"> | <img src="screenshots/details_fragment_dark_landscape.jpg" width="415"> |
+| Mode  | Movies | Favorites | Details |
+|------|------|------|------|
+| Dark | <img src="screenshot/movies_dark_landscape.jpg" width="275"> | <img src="screenshot/favorites_dark_landscape.jpg" width="275"> | <img src="details_dark_landscape.jpg" width="275"> |
+| Light | <img src="screenshot/movies_light_landscape.jpg" width="275"> | <img src="screenshot/favorites_light_landscape.jpg" width="275"> | <img src="details_light_landscape.jpg" width="275"> |
 
 <br />
 
