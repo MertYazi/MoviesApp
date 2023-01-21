@@ -7,15 +7,15 @@ Project is written in Kotlin.💯
 
 | Mode  | Movies | Favorites | Details |
 |------|------|------|------|
-| Dark | <img src="screenshot/movies_dark_portrait.jpg" width="275"> | <img src="screenshot/favorites_dark_portrait.jpg" width="275"> | <img src="details_dark_portrait.jpg" width="275"> |
-| Light | <img src="screenshot/movies_light_portrait.jpg" width="275"> | <img src="screenshot/favorites_light_portrait.jpg" width="275"> | <img src="details_light_portrait.jpg" width="275"> |
+| Dark | <img src="screenshots/movies_dark_portrait.jpg" width="275"> | <img src="screenshots/favorites_dark_portrait.jpg" width="275"> | <img src="screenshots/details_dark_portrait.jpg" width="275"> |
+| Light | <img src="screenshots/movies_light_portrait.jpg" width="275"> | <img src="screenshots/favorites_light_portrait.jpg" width="275"> | <img src="screenshots/details_light_portrait.jpg" width="275"> |
 
 <br />
 
 | Mode  | Movies | Favorites | Details |
 |------|------|------|------|
-| Dark | <img src="screenshot/movies_dark_landscape.jpg" width="275"> | <img src="screenshot/favorites_dark_landscape.jpg" width="275"> | <img src="details_dark_landscape.jpg" width="275"> |
-| Light | <img src="screenshot/movies_light_landscape.jpg" width="275"> | <img src="screenshot/favorites_light_landscape.jpg" width="275"> | <img src="details_light_landscape.jpg" width="275"> |
+| Dark | <img src="screenshots/movies_dark_landscape.jpg" width="275"> | <img src="screenshots/favorites_dark_landscape.jpg" width="275"> | <img src="screenshots/details_dark_landscape.jpg" width="275"> |
+| Light | <img src="screenshots/movies_light_landscape.jpg" width="275"> | <img src="screenshots/favorites_light_landscape.jpg" width="275"> | <img src="screenshots/details_light_landscape.jpg" width="275"> |
 
 <br />
 
