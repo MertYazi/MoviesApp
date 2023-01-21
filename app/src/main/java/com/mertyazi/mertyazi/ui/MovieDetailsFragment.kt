@@ -4,12 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.navigation.fragment.findNavController
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.navArgs
 import com.mertyazi.mertyazi.R
 import com.mertyazi.mertyazi.data.remote.responses.MovieDetailsResponse
@@ -23,6 +21,8 @@ class MovieDetailsFragment : BaseFragment() {
     private var _binding: FragmentMovieDetailsBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var mMovieId: String
+    private var isFavorite: Boolean = false
     private lateinit var mMovieDetails: MovieDetailsResponse
 
     override fun onCreateView(
@@ -36,13 +36,32 @@ class MovieDetailsFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val args: MovieDetailsFragmentArgs by navArgs()
+        mMovieId = args.movieId
+
         initializeViewModel()
 
         binding.apply {
             clImdbContent.setOnClickListener {
                 redirectToImdbApp()
             }
+            ivFavoriteMovie.setOnClickListener {
+                changeFavorite()
+            }
         }
+    }
+
+    private fun changeFavorite() {
+        if (isFavorite) {
+            viewModel.deleteFavoriteMovie(mMovieDetails)
+            binding.ivFavoriteMovie.setImageDrawable(
+                ContextCompat.getDrawable(requireContext(), R.drawable.ic_favorite_unselected))
+        } else {
+            viewModel.insertFavoriteMovie(mMovieDetails)
+            binding.ivFavoriteMovie.setImageDrawable(
+                ContextCompat.getDrawable(requireContext(), R.drawable.ic_favorite_selected))
+        }
+        isFavorite = !isFavorite
     }
 
     private fun populateUI() {
@@ -52,9 +71,9 @@ class MovieDetailsFragment : BaseFragment() {
     }
 
     private fun initializeViewModel() {
-        val args: MovieDetailsFragmentArgs by navArgs()
+        viewModel.movieId = mMovieId
 
-        viewModel.movieId = args.movieId
+        viewModel.isFavorite(mMovieId)
 
         viewModel.loader.observe(viewLifecycleOwner) { loading ->
             when (loading) {
@@ -67,16 +86,20 @@ class MovieDetailsFragment : BaseFragment() {
             if (movieDetails.getOrNull() != null) {
                 mMovieDetails = movieDetails.getOrNull()!!.body()!!
                 populateUI()
-            } else {
-                Log.e("apiDataMovieDetails", "is null")
-                Toast.makeText(
-                    requireActivity(),
-                    resources.getString(R.string.details_not_ready),
-                    Toast.LENGTH_SHORT
-                ).show()
-                findNavController().popBackStack(R.id.moviesFragment, false)
             }
         }
+
+        viewModel.favorite.observe(viewLifecycleOwner) { favorite ->
+            isFavorite = favorite
+            if (favorite) {
+                binding.ivFavoriteMovie.setImageDrawable(
+                    ContextCompat.getDrawable(requireContext(), R.drawable.ic_favorite_selected))
+            } else {
+                binding.ivFavoriteMovie.setImageDrawable(
+                    ContextCompat.getDrawable(requireContext(), R.drawable.ic_favorite_unselected))
+            }
+        }
+
     }
 
     @SuppressLint("QueryPermissionsNeeded")

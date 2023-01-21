@@ -7,7 +7,6 @@
     <string name="moonrise_kingdom">Moonrise Kingdom (2012)</string>
     <string name="moonrise_kingdom_description">A pair of young lovers flee their New England town which causes a local search party to fan out to find them.</string>
     <string name="out_of_ten">/10</string>
-    <string name="details_not_ready">Details for this movie is not ready yet.</string>
     <string name="details_image">Details Image</string>
     <string name="arrow_image">Go To Details</string>
     <string name="upcoming_image">Upcoming Image</string>
@@ -15,4 +14,8 @@
     <string name="imdb_image">IMDB Image</string>
     <string name="rate_image">Rate Image</string>
     <string name="dot_image">Dot Image</string>
+    <string name="movies">Movies</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorites_image">Favorites Image</string>
+    <string name="favorite_image">Favorite Image</string>
 </resources>

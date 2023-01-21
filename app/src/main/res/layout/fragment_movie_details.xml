@@ -47,6 +47,28 @@
                     android:contentDescription="@string/details_image"
                     android:scaleType="fitXY" />
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:background="@drawable/favorite_button_background"
+                    android:elevation="@dimen/_12sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_favorite_movie"
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:contentDescription="@string/favorite_image"
+                        android:src="@drawable/ic_favorite_unselected"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </FrameLayout>
 
             <TextView
@@ -59,7 +81,7 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:textSize="@dimen/_15ssp"
+                android:textSize="@dimen/_16ssp"
                 android:fontFamily="@font/roboto_bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +127,7 @@
                     android:id="@+id/tv_movie_imdb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_10ssp"
+                    android:textSize="@dimen/_11ssp"
                     android:fontFamily="@font/roboto_medium"
                     android:layout_marginStart="@dimen/_3sdp"
                     tools:text="7.8"
@@ -118,7 +140,7 @@
                     android:id="@+id/tv_movie_imdb_max"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_10ssp"
+                    android:textSize="@dimen/_11ssp"
                     android:textColor="@color/colorImdbPoints"
                     android:fontFamily="@font/roboto_medium"
                     tools:text="/10"
@@ -144,7 +166,7 @@
                     android:id="@+id/tv_movie_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_10ssp"
+                    android:textSize="@dimen/_11ssp"
                     android:fontFamily="@font/roboto_medium"
                     tools:text="15.06.2021"
                     convertReleaseDateToString="@{movieDetails.release_date}"
@@ -156,6 +178,23 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
+                android:id="@+id/tv_movie_details_genres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                convertGenresToString="@{movieDetails.genres}"
+                tools:text="Science Fiction  Horror  Comedy"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/colorImdbPoints"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_imdb_content" />
+
+            <TextView
                 android:id="@+id/tv_movie_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -165,13 +204,13 @@
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
-                android:textSize="@dimen/_11ssp"
+                android:textSize="@dimen/_12ssp"
                 android:fontFamily="@font/roboto_regular"
                 android:lineSpacingMultiplier="0"
-                android:lineSpacingExtra="@dimen/_17ssp"
+                android:lineSpacingExtra="@dimen/_20ssp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cl_imdb_content" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_movie_details_genres" />
 
             <ProgressBar
                 android:id="@+id/loader"
@@ -179,6 +218,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="@dimen/_25sdp"
                 android:minWidth="@dimen/_25sdp"
+                android:indeterminateTint="@color/primaryDarkColor"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -2,6 +2,7 @@ package com.mertyazi.mertyazi.ui
 
 import android.util.Log
 import androidx.lifecycle.*
+import com.mertyazi.mertyazi.data.remote.responses.MovieDetailsResponse
 import com.mertyazi.mertyazi.repositories.MoviesRepository
 import com.mertyazi.mertyazi.data.remote.responses.NowPlayingResponse
 import com.mertyazi.mertyazi.data.remote.responses.UpcomingResponse
@@ -15,9 +16,13 @@ class MoviesViewModel(
     private val repository: MoviesRepository
 ): ViewModel() {
 
+    var movieId: String = ""
+
     val loader = MutableLiveData<Boolean>()
 
-    var movieId: String = ""
+    val favorite = MutableLiveData<Boolean>()
+
+    val randomMovie = MutableLiveData<MovieDetailsResponse>()
 
     val upcomingMovies: MutableLiveData<UpcomingResponse> = MutableLiveData()
     var upcomingMoviesPage = 0
@@ -29,6 +34,7 @@ class MoviesViewModel(
     init {
         getUpcomingMovies()
         getNowPlayingMovies()
+        getRandomMovie()
     }
 
     fun getUpcomingMovies() = viewModelScope.safeLaunch {
@@ -63,15 +69,19 @@ class MoviesViewModel(
         }
     }
 
-    fun refreshUpcomingMovies() {
-        upcomingMoviesPage = 0
-        upcomingMoviesResponse = null
-        getUpcomingMovies()
+    fun isFavorite(id: String) = viewModelScope.safeLaunch {
+        loader.postValue(true)
+        val movie = repository.isMovieFavorite(id)
+        if (movie != null) {
+            favorite.postValue(true)
+        } else {
+            favorite.postValue(false)
+        }
+        loader.postValue(false)
     }
 
-    fun refreshNowPlayingMovies() {
-        nowPlayingMoviesResponse = null
-        getNowPlayingMovies()
+    fun getRandomMovie() = viewModelScope.safeLaunch {
+        randomMovie.postValue(repository.getRandomMovie())
     }
 
     val movieDetails = liveData {
@@ -83,14 +93,33 @@ class MoviesViewModel(
             .asLiveData())
     }
 
+    fun refreshUpcomingMovies() {
+        upcomingMoviesPage = 0
+        upcomingMoviesResponse = null
+        getUpcomingMovies()
+    }
+
+    fun refreshNowPlayingMovies() {
+        nowPlayingMoviesResponse = null
+        getNowPlayingMovies()
+    }
+
+    fun getFavoriteMovies() = repository.getFavoriteMovies()
+
+    fun insertFavoriteMovie(movieDetails: MovieDetailsResponse) = viewModelScope.safeLaunch {
+        repository.insertFavoriteMovie(movieDetails)
+    }
+
+    fun deleteFavoriteMovie(movieDetails: MovieDetailsResponse) = viewModelScope.safeLaunch {
+        repository.deleteFavoriteMovie(movieDetails)
+    }
+
     private fun CoroutineScope.safeLaunch(block: suspend CoroutineScope.() -> Unit): Job {
         return this.launch {
             try {
                 block()
-            } catch (ce: CancellationException) {
-                // You can ignore or log this exception
+            } catch (_: CancellationException) {
             } catch (e: Exception) {
-                // Here it's better to at least log the exception
                 Log.e("TAG","Coroutine error", e)
             }
         }

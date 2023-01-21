@@ -51,6 +51,7 @@
             android:layout_height="wrap_content"
             android:minHeight="@dimen/_25sdp"
             android:minWidth="@dimen/_25sdp"
+            android:indeterminateTint="@color/primaryDarkColor"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

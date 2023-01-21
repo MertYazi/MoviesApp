@@ -1,5 +1,6 @@
 package com.mertyazi.mertyazi
 
+import com.mertyazi.mertyazi.data.local.MoviesDao
 import com.mertyazi.mertyazi.data.remote.MoviesService
 import com.mertyazi.mertyazi.data.remote.responses.NowPlayingResponse
 import com.mertyazi.mertyazi.data.remote.responses.UpcomingResponse
@@ -21,6 +22,7 @@ import retrofit2.Response
 class MoviesRepositoryShould: BaseUnitTest() {
 
     private val service: MoviesService = mock()
+    private val dao: MoviesDao = mock()
     private val upComingMovies = mock<Response<UpcomingResponse>>()
     private val nowPlayingMovies = mock<Response<NowPlayingResponse>>()
     private val exception = RuntimeException("Something went wrong")
@@ -66,7 +68,7 @@ class MoviesRepositoryShould: BaseUnitTest() {
             }
         )
 
-        return MoviesRepository(service)
+        return MoviesRepository(service, dao)
     }
 
     private suspend fun mockSuccessfulCaseNowPlayingMovies(): MoviesRepository {
@@ -76,7 +78,7 @@ class MoviesRepositoryShould: BaseUnitTest() {
             }
         )
 
-        return MoviesRepository(service)
+        return MoviesRepository(service, dao)
     }
 
     private suspend fun mockFailureCaseUpcomingMovies(): MoviesRepository {
@@ -86,7 +88,7 @@ class MoviesRepositoryShould: BaseUnitTest() {
             }
         )
 
-        return MoviesRepository(service)
+        return MoviesRepository(service, dao)
     }
 
     private suspend fun mockFailureCaseNowPlayingMovies(): MoviesRepository {
@@ -96,6 +98,6 @@ class MoviesRepositoryShould: BaseUnitTest() {
             }
         )
 
-        return MoviesRepository(service)
+        return MoviesRepository(service, dao)
     }
 }

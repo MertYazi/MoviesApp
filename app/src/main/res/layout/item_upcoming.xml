@@ -8,10 +8,10 @@
 
     <FrameLayout
         android:id="@+id/fl_movie"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_70sdp"
+        android:layout_width="@dimen/_86sdp"
+        android:layout_height="@dimen/_78sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -55,9 +55,9 @@
             android:id="@+id/tv_movie_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_2sdp"
             tools:text="@string/movie_title"
-            android:textSize="@dimen/_12ssp"
+            android:textSize="@dimen/_13ssp"
             android:fontFamily="@font/roboto_bold"
             android:singleLine="true"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,11 +68,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
             tools:text="@string/movie_description"
-            android:textSize="@dimen/_11ssp"
+            android:textSize="@dimen/_12ssp"
             android:textColor="@color/colorSubText"
             android:fontFamily="@font/roboto_medium"
             android:lineSpacingMultiplier="0"
-            android:lineSpacingExtra="@dimen/_16ssp"
+            android:lineSpacingExtra="@dimen/_18ssp"
             android:lines="2"
             app:layout_constraintTop_toBottomOf="@+id/tv_movie_title" />
 
@@ -103,9 +103,9 @@
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_1sdp"
+        android:layout_height="0.8dp"
         android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
         app:dividerColor="@color/colorDivider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
