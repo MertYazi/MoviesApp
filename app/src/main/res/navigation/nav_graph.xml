@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/moviesFragment"
-        android:name="com.mertyazi.mertyazi.ui.MoviesFragment"
+        android:name="com.mertyazi.mertyazi.movies.presentation.MoviesFragment"
         android:label="fragment_movies"
         tools:layout="@layout/fragment_movies" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.mertyazi.mertyazi.ui.FavoritesFragment"
+        android:name="com.mertyazi.mertyazi.favorites.presentation.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" >
         <action
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/movieDetailsFragment"
-        android:name="com.mertyazi.mertyazi.ui.MovieDetailsFragment"
+        android:name="com.mertyazi.mertyazi.details.presentation.MovieDetailsFragment"
         android:label="fragment_movie_details"
         tools:layout="@layout/fragment_movie_details">
         <argument

@@ -88,6 +88,8 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
 
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+
     implementation 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
 
     testImplementation 'junit:junit:4.13.2'
