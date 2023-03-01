@@ -6,7 +6,7 @@
     android:id="@+id/favorite_movies_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.FavoritesFragment">
+    tools:context=".favorites.presentation.FavoritesFragment">
 
     <FrameLayout
         android:id="@+id/fl_favorite_movies"

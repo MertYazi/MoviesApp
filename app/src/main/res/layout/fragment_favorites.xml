@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ui.FavoritesFragment">
+        tools:context=".favorites.presentation.FavoritesFragment">
 
         <FrameLayout
             android:id="@+id/fl_favorite_movies"

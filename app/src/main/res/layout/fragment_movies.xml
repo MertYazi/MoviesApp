@@ -6,7 +6,7 @@
     android:id="@+id/srl_movies"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MoviesFragment">
+    tools:context=".movies.presentation.MoviesFragment">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/sv_movies"

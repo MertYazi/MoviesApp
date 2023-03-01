@@ -6,7 +6,7 @@
     <data>
         <variable
             name="movieDetails"
-            type="com.mertyazi.mertyazi.data.remote.responses.MovieDetailsResponse" />
+            type="com.mertyazi.mertyazi.details.presentation.DetailsViewState" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -61,7 +61,10 @@
                         android:layout_width="@dimen/_26sdp"
                         android:layout_height="@dimen/_26sdp"
                         android:contentDescription="@string/favorite_image"
-                        android:src="@drawable/ic_favorite_unselected"
+                        tools:src="@drawable/ic_favorite_unselected"
+                        setFavorite="@{movieDetails.isFavorite}"
+                        android:visibility="invisible"
+                        tools:visibility="visible"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -76,8 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="@string/moonrise_kingdom"
-                convertTitleToString="@{movieDetails.title}"
-                minifyDate="@{movieDetails.release_date}"
+                android:text="@{movieDetails.title}"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_15sdp"
@@ -131,7 +133,7 @@
                     android:fontFamily="@font/roboto_medium"
                     android:layout_marginStart="@dimen/_3sdp"
                     tools:text="7.8"
-                    convertVoteAverageToString="@{movieDetails.vote_average}"
+                    android:text="@{movieDetails.vote_average}"
                     app:layout_constraintStart_toEndOf="@+id/iv_movie_imdb_rate"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" />
@@ -169,7 +171,7 @@
                     android:textSize="@dimen/_11ssp"
                     android:fontFamily="@font/roboto_medium"
                     tools:text="15.06.2021"
-                    convertReleaseDateToString="@{movieDetails.release_date}"
+                    android:text="@{movieDetails.release_date}"
                     android:layout_marginStart="@dimen/_5sdp"
                     app:layout_constraintStart_toEndOf="@+id/iv_movie_imdb_dot"
                     app:layout_constraintTop_toTopOf="parent"
