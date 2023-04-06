@@ -68,9 +68,15 @@ class MoviesViewModel @Inject constructor(
             is Result.Error -> _viewStateNowPlaying.postValue(MoviesViewState.Error)
             is Result.Success -> {
                 val nowPlaying = NowPlayingViewState(
-                    resultToResultViewStateMapper.invoke(
-                        result.data.results
-                    ).subList(0, SLIDER_ITEM_COUNT).toMutableList(),
+                    if (result.data.results.size > 5) {
+                        resultToResultViewStateMapper.invoke(
+                            result.data.results
+                        ).subList(0, SLIDER_ITEM_COUNT).toMutableList()
+                    } else {
+                        resultToResultViewStateMapper.invoke(
+                            result.data.results
+                        )
+                    },
                     result.data.totalPages
                 )
                 if (nowPlayingMoviesResponse == null) {

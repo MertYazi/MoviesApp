@@ -92,6 +92,9 @@ dependencies {
 
     implementation 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
 
+    kapt("androidx.lifecycle:lifecycle-compiler:2.5.1")
+    testImplementation "io.mockk:mockk:1.12.1"
+
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0'
     testImplementation 'org.mockito:mockito-inline:2.28.2'
